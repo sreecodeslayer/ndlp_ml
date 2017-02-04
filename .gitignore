@@ -1,0 +1,5 @@
+# Python files
+*.py[cod]
+
+# Ignore folders
+ve/
