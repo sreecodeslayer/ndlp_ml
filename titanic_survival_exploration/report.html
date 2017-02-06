@@ -13250,8 +13250,25 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer</strong>: <em>80.70%</em></p>
-
+<p><strong>Answer</strong>:</p>
+<h5 id="Steps:">Steps:<a class="anchor-link" href="#Steps:">&#182;</a></h5><ul>
+<li>First of all I checked outcomes for each feature that is suggested under hints without any filters.</li>
+<li>This revealed a rough idea of which of those would make the most significant change in the accuracy.</li>
+<li>I then applied filters based on the graph obtained using the <em><code>survival_stats</code></em></li>
+<li>As per ths observation I made the necessary changes to the code in the <em><code>predictions_3</code></em> function</li>
+</ul>
+<h5 id="Features-I-considered:">Features I considered:<a class="anchor-link" href="#Features-I-considered:">&#182;</a></h5><ul>
+<li>Since the <em><code>Sex</code></em> feature was already checked for in the previous predictions, I went on to check on the other feature, especially the <em><code>Parch</code></em> and the <code>SibSp</code>* which brought about major changes in the plots.</li>
+<li>I also used Filters on <em><code>Sex</code></em> and <em><code>Age</code></em>  </li>
+</ul>
+<h5 id="Were-certain-features-more-informative-than-others?">Were certain features more informative than others?<a class="anchor-link" href="#Were-certain-features-more-informative-than-others?">&#182;</a></h5><ul>
+<li>Yes, they were.</li>
+<li>For example, to me, the feature <em><code>Fare</code></em>,<em><code>Cabin</code></em> were not so decisive compared to the ones mentioned above!  </li>
+</ul>
+<h5 id="Which-conditions-did-you-use-to-split-the-survival-outcomes-in-the-data?">Which conditions did you use to split the survival outcomes in the data?<a class="anchor-link" href="#Which-conditions-did-you-use-to-split-the-survival-outcomes-in-the-data?">&#182;</a></h5><ul>
+<li>I mainly used the <em><code>Sex</code></em> and <em><code>Age</code></em> filter conditions as they brought major difference to the total numbre of survivors while using almost all features.  </li>
+</ul>
+<h5 id="Accuracy-:-80.70%">Accuracy : <em><code>80.70%</code></em><a class="anchor-link" href="#Accuracy-:-80.70%">&#182;</a></h5>
 </div>
 </div>
 </div>
