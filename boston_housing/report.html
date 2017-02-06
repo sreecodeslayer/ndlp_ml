@@ -12109,7 +12109,11 @@ To me an increase in <code>PTRATIO</code> would mean more students to a teacher,
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> <em><code>0.923</code></em></p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><em><code>0.923</code></em> </li>
+<li>This would mean that the model have captured the variation successfully and can distinguish the variation.</li>
+</ul>
 
 </div>
 </div>
@@ -13760,7 +13764,7 @@ eiIiEjGU9EREJGL8fxG/XqNhxgaaAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li>The graph above trained with max_depth of 1 appears to be 'underfitting' as the validation score and training score curves seems to be on the lower side (though it converges here), and is yet to achieve a high score. i.e. a <code>high bias</code></li>
+<li>The graph above trained with max_depth of 1 seems to be just about right with a <code>low variance</code> since its tightly packed to training data and doesn't suffer from <code>high bias</code> since the validations are closer to the actual training data.</li>
 <li>The graph above trained with max_depth of 10 suffers from 'overfitting' as the validation score curve seems to be lower considerably compared to the position of the Training score. i.e. a <code>high variance</code></li>
 <li>The distance between the corresponding points of both curves helps in deciding if the model is doing well with the training.</li>
 </ul>
@@ -13783,7 +13787,11 @@ eiIiEjGU9EREJGL8fxG/XqNhxgaaAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The optimal value for maximum depth should depend on how closely and high are the learning/compexity curves placed. In other words, the value of max depth should in turn produce a  balance between the Bias and Variance.</p>
+<p><strong>Answer: </strong></p>
+<ul>
+<li>A value <code>3</code> or <code>4</code>, since those gives the maximum <code>score</code> and at the same time has a bias-variance balance. Since <code>4</code> is where the curves tend to become a plateau, I would go for <code>4</code>. </li>
+<li>The optimal value for maximum depth should depend on how closely and high are the learning/compexity curves placed. In other words, the value of max depth should in turn produce a balance between the Bias and Variance.</li>
+</ul>
 
 </div>
 </div>
@@ -13841,12 +13849,29 @@ eiIiEjGU9EREJGL8fxG/XqNhxgaaAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li><code>K-Fold cross validation</code> technique is a validation process for the dataset. In this technique, the algorithm would split the dataset into small bin sized chunks of data, running multiple cross-validation, each time picking one bin as the test set and the others as training set, and then finally, it would go for the average. </li>
+<li><code>K-Fold cross validation</code> technique is a validation process for the dataset. In this technique, the algorithm would split the dataset into small bin sized chunks of data, running multiple cross-validation, each time picking one bin as the test set and the others as training set, and then finally, it would go for the average.</li>
+<li>i.e. The <code>K-Fold cross validation</code> splits the dataset into <code>k</code> bins, and <code>1</code> bin is used for testing while <code>k-1</code> remains together for training. This repeats for each bin, everytime taking one bin to test set and rest <code>k-1</code> to training set untill every bin is used.</li>
+<li>This means, there has to <code>k</code> separate iterations over the dataset, but the interesting thing to note is that, in each iteration, the test dataset is always new, and the training data set will have a new bin of data, making a variation.</li>
 <li>The benefit here is that the complete dataset we have can be used for both training and testing, unlike a simple cv where we would just settle for the tradeoff between the test and train split.</li>
+<li>So, after <code>k</code> iterations, the results of <code>k</code> separate tests are averaged together to obtain the final test result leading to a more accurate model at the cost of training time.</li>
+<li>If we compare this strategy to a simple train/test split cross-validation, it is understood that we are compromising a certain amount of available data towards the testing set alone. i.e. we loose out on the opportunity to use some of those valuable training data for the model, which could improve the accuracy as a whole.</li>
 </ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -13978,7 +14003,11 @@ eiIiEjGU9EREJGL8fxG/XqNhxgaaAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> <em>4</em></p>
+<p><strong>Answer: </strong></p>
+<ul>
+<li><em>4</em>   </li>
+<li>I answered the Q6. by saying it could possibly be <code>3</code> or <code>4</code>.</li>
+</ul>
 
 </div>
 </div>
