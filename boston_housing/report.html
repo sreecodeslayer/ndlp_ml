@@ -12112,7 +12112,8 @@ To me an increase in <code>PTRATIO</code> would mean more students to a teacher,
 <p><strong>Answer:</strong></p>
 <ul>
 <li><em><code>0.923</code></em> </li>
-<li>This would mean that the model have captured the variation successfully and can distinguish the variation.</li>
+<li>This would mean that the model have captured the variation successfully and can distinguish the variation as the <strong>coeff of determination (R^2)</strong> for the model is <strong>very close to being 1.0</strong>, which means fraction by which the variance of the errors is less than the variance of the dependent variable. So the chance of a valid prediction is more than that of a wrong one. Had the <strong>coeff of determination (R^2)</strong> been a value near to <code>0</code> the model would be a poor one, failing to make successful predictions.</li>
+<li>So, <strong>yes</strong> this model have successfully captured the variation of the target variable</li>
 </ul>
 
 </div>
@@ -13764,9 +13765,9 @@ eiIiEjGU9EREJGL8fxG/XqNhxgaaAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li>The graph above trained with max_depth of 1 seems to be just about right with a <code>low variance</code> since its tightly packed to training data and doesn't suffer from <code>high bias</code> since the validations are closer to the actual training data.</li>
-<li>The graph above trained with max_depth of 10 suffers from 'overfitting' as the validation score curve seems to be lower considerably compared to the position of the Training score. i.e. a <code>high variance</code></li>
-<li>The distance between the corresponding points of both curves helps in deciding if the model is doing well with the training.</li>
+<li>The graph above trained with max_depth of 1, based on the complexity curve both the training and validation scores are low, on near side of <code>0</code>, the model suffers from <strong>over generalization</strong> or in other words, from <code>high bias</code> (<strong><em>underfitting</em></strong>). </li>
+<li>The graph above trained with max_depth of 10 suffers from 'overfitting' as the validation score curve seems to be lower considerably compared to the position of the training score. Also, the value of R^2 is high, and it is not <strong>generalized</strong> enough. i.e. a <code>high variance</code> ((<strong><em>overfitting</em></strong>))</li>
+<li>The distance between the corresponding points of both curves helps in deciding if the model is doing well with the training. Also, the value of R^2 (0 to 1, with closer to 1 being a favorable value) is important in deciding how well the model is generalized. A value for R^2 approaching 1 would mean that the model will be very successful in predicting a True result, where a value closer to <code>0</code> would mean otherwise(the model being very poor in predictions)</li>
 </ul>
 
 </div>
